@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FORMA3D — Impresión 3D en PLA</title>
+  <title>ZONA3D — Impresión 3D en PLA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
@@ -23,17 +23,22 @@
   <!-- NAV -->
   <nav class="lp-nav">
     <div class="lp-nav-inner">
-      <div class="lp-logo">FORMA<span>3D</span></div>
+      <div class="lp-logo">ZONA<span>3D</span></div>
       <button class="lp-nav-cta">Hacer una consulta ↗</button>
     </div>
   </nav>
 
-  <!-- HERO: fullscreen 3D animation -->
+   <!-- HERO: fullscreen 3D animation -->
   <section class="lp-hero-full">
     <canvas id="hero3d"></canvas>
     <div class="canvas-ui">
       <div class="cu-top">
-        <div class="cu-badge">LIVE · FDM</div>
+        <button class="cu-replay" id="cuReplay">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path d="M1.5 6a4.5 4.5 0 1 0 1-2.6"/><polyline points="1.5,1.5 1.5,5 5,5"/>
+          </svg>
+          Reiniciar
+        </button>
       </div>
       <div class="cu-bottom">
         <div class="cu-status" id="cuStatus">
@@ -41,39 +46,17 @@
           <div class="cu-track"><div class="cu-fill" id="cuFill"></div></div>
           <div class="cu-layers" id="cuLayers">Capa 0 / 100</div>
         </div>
-        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px">
-          <button class="cu-replay" id="cuReplay">
-            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <path d="M1.5 6a4.5 4.5 0 1 0 1-2.6"/><polyline points="1.5,1.5 1.5,5 5,5"/>
-            </svg>
-            Reiniciar
-          </button>
-          <div class="cu-hint" id="cuHint">arrastrar para rotar</div>
-        </div>
+        <div class="cu-hint" id="cuHint">arrastrar para rotar</div>
       </div>
     </div>
   </section>
 
-  <!-- MINI CARDS -->
-  <div class="lp-cards-bar">
+  <!-- HERO TAGLINE -->
+  <div class="lp-tagline-bar">
     <div class="container">
-      <div class="lp-cards-grid">
-        <div class="lp-mini-card">
-          <div class="lp-mini-card-icon">🧱</div>
-          <div><div class="lp-mini-card-title">Material PLA</div><div class="lp-mini-card-sub">Resistente y liviano</div></div>
-        </div>
-        <div class="lp-mini-card">
-          <div class="lp-mini-card-icon">📦</div>
-          <div><div class="lp-mini-card-title">Sin mínimo</div><div class="lp-mini-card-sub">Desde 1 unidad</div></div>
-        </div>
-        <div class="lp-mini-card">
-          <div class="lp-mini-card-icon">🎨</div>
-          <div><div class="lp-mini-card-title">Personalizable</div><div class="lp-mini-card-sub">Colores y diseños</div></div>
-        </div>
-        <div class="lp-mini-card">
-          <div class="lp-mini-card-icon">🤝</div>
-          <div><div class="lp-mini-card-title">Trato directo</div><div class="lp-mini-card-sub">Con quien fabrica</div></div>
-        </div>
+      <div class="lp-tagline-box">
+        <h1 class="lp-tagline-h1">Impresión 3D en Formosa</h1>
+        <p class="lp-tagline-sub">Real · Local · Sin vueltas</p>
       </div>
     </div>
   </div>
@@ -81,28 +64,18 @@
   <!-- TRABAJOS REALIZADOS -->
   <section class="lp-section">
     <div class="container">
-      <div class="lp-section-label">Trabajos realizados</div>
+      <div class="lp-section-label">Nuestro Catálogo</div>
       <div class="lp-section-title">Lo que ya hicimos.</div>
       <p class="lp-section-sub">Fotos reales de piezas fabricadas en PLA. Sin filtros, sin renders.</p>
       <div class="lp-gallery-grid">
-        <div class="lp-gcard">
-          <div class="lp-gcard-img lp-gcard-ph" style="background:linear-gradient(135deg,#0d2029 0%,#0a2a22 100%);display:flex;align-items:center;justify-content:center;">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="28" width="32" height="3" rx="1.5" fill="#00c9a7" opacity=".3"/><rect x="16" y="16" width="16" height="12" rx="2" fill="#00c9a7" opacity=".18"/><circle cx="24" cy="36" r="3" fill="#00c9a7" opacity=".4"/><text x="24" y="44" text-anchor="middle" font-size="7" fill="#00c9a7" opacity=".35" font-family="monospace">foto</text></svg>
-          </div>
-          <div class="lp-gcard-body">
-            <span class="lp-gcard-tag">Decoración</span>
-            <div class="lp-gcard-name">Porta celular gato</div>
-            <div class="lp-gcard-desc">Soporte de escritorio con forma de gato. Acabado satinado, varios colores.</div>
-          </div>
-        </div>
         <div class="lp-gcard">
           <div class="lp-gcard-img lp-gcard-ph" style="background:linear-gradient(135deg,#0d2029 0%,#0a2520 100%);display:flex;align-items:center;justify-content:center;">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="26" rx="10" ry="12" fill="#00c9a7" opacity=".13"/><circle cx="24" cy="14" r="5" fill="#00c9a7" opacity=".22"/><text x="24" y="44" text-anchor="middle" font-size="7" fill="#00c9a7" opacity=".35" font-family="monospace">foto</text></svg>
           </div>
           <div class="lp-gcard-body">
-            <span class="lp-gcard-tag">Figuras</span>
-            <div class="lp-gcard-name">Figura de vaca</div>
-            <div class="lp-gcard-desc">Alto nivel de detalle. Ideal para souvenir, regalo o colección temática.</div>
+            <span class="lp-gcard-tag">Disponible</span>
+            <div class="lp-gcard-name">Soportes y accesorios</div>
+            <div class="lp-gcard-desc">Soporte notebook, soporte lentes VR + mandos, porta tarjetas/chips/pendrive, porta abanico, portacelular ajustable</div>
           </div>
         </div>
         <div class="lp-gcard">
@@ -110,9 +83,9 @@
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="18" y="10" width="12" height="6" rx="2" fill="#00c9a7" opacity=".2"/><rect x="16" y="18" width="16" height="7" rx="2" fill="#00c9a7" opacity=".2"/><rect x="18" y="27" width="12" height="6" rx="2" fill="#00c9a7" opacity=".2"/><text x="24" y="44" text-anchor="middle" font-size="7" fill="#00c9a7" opacity=".35" font-family="monospace">foto</text></svg>
           </div>
           <div class="lp-gcard-body">
-            <span class="lp-gcard-tag">Articulados</span>
-            <div class="lp-gcard-name">Figura articulada</div>
-            <div class="lp-gcard-desc">Piezas móviles impresas en un solo proceso. Disponible en varios colores.</div>
+            <span class="lp-gcard-tag">Disponible</span>
+            <div class="lp-gcard-name">Decoración y juguetes</div>
+            <div class="lp-gcard-desc">Maceteros, decoración para el hogar. Piezas móviles impresas en un solo proceso.  Figuras articuladas, juguetes antistrés, figura robótica</div>
           </div>
         </div>
         <div class="lp-gcard">
@@ -120,9 +93,19 @@
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 12 L32 28 L24 36 L16 28 Z" fill="#00c9a7" opacity=".15"/><path d="M24 18 L29 28 L24 33 L19 28 Z" fill="#00c9a7" opacity=".2"/><text x="24" y="44" text-anchor="middle" font-size="7" fill="#00c9a7" opacity=".35" font-family="monospace">foto</text></svg>
           </div>
           <div class="lp-gcard-body">
-            <span class="lp-gcard-tag">Regalo</span>
-            <div class="lp-gcard-name">Figura calabaza</div>
-            <div class="lp-gcard-desc">Diseño articulado decorativo. Perfecto como regalo original o coleccionable.</div>
+            <span class="lp-gcard-tag">Disponible</span>
+            <div class="lp-gcard-name">Utilitarios</div>
+            <div class="lp-gcard-desc">Pastilleros, calibre, máquina enrolladora de filamento, toroidal/psicodélico (objeto decorativo/funcional)</div>
+          </div>
+        </div>
+        <div class="lp-gcard">
+          <div class="lp-gcard-img lp-gcard-ph" style="background:linear-gradient(135deg,#0d2225 0%,#0a2318 100%);display:flex;align-items:center;justify-content:center;">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 12 L32 28 L24 36 L16 28 Z" fill="#00c9a7" opacity=".15"/><path d="M24 18 L29 28 L24 33 L19 28 Z" fill="#00c9a7" opacity=".2"/><text x="24" y="44" text-anchor="middle" font-size="7" fill="#00c9a7" opacity=".35" font-family="monospace">foto</text></svg>
+          </div>
+          <div class="lp-gcard-body">
+            <span class="lp-gcard-tag">Disponible</span>
+            <div class="lp-gcard-name">Regalos y souvenirs</div>
+            <div class="lp-gcard-desc">Alto nivel de detalle. Ideal para souvenir, regalo o colección temática.</div>
           </div>
         </div>
       </div>

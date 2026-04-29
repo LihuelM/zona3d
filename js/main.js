@@ -19,7 +19,7 @@ renderer.localClippingEnabled = true;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.4;
+renderer.toneMappingExposure = 1.9;
 
 function resize() {
   const w = wrap.offsetWidth, h = wrap.offsetHeight;
@@ -42,9 +42,9 @@ camera.lookAt(LOOK);
 resize();
 
 // ── LIGHTS ────────────────────────────────────────────────────────────────
-scene.add(new THREE.AmbientLight(0x0a1a20, 5));
+scene.add(new THREE.AmbientLight(0x183238, 7));
 
-const key = new THREE.DirectionalLight(0x5588aa, 2.5);
+const key = new THREE.DirectionalLight(0x88cfe0, 3.8);
 key.position.set(-12, 22, 14);
 key.castShadow = true;
 key.shadow.mapSize.setScalar(1024);
