@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZONA3D — Impresión 3D en PLA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/responsive.css">
 
@@ -24,7 +24,10 @@
   <nav class="lp-nav">
     <div class="lp-nav-inner">
       <div class="lp-logo">ZONA<span>3D</span></div>
-      <button class="lp-nav-cta">Hacer una consulta ↗</button>
+      <div class="lp-nav-actions">
+        <button class="lp-nav-cta">Hacer una consulta ↗</button>
+        <button class="lp-nav-ghost">Ver catálogo</button>
+      </div>
     </div>
   </nav>
 
@@ -56,56 +59,109 @@
     <div class="container">
       <div class="lp-tagline-box">
         <h1 class="lp-tagline-h1">Impresión 3D en Formosa</h1>
-        <p class="lp-tagline-sub">Real · Local · Sin vueltas</p>
+        <p class="lp-section-sub">
+          Creamos regalos personalizados y accesorios funcionales para empresas, eventos y profesionales. <br>
+          Diseños modernos, producción a pedido y personalización simple.
+        </p>
+        <!-- <p class="lp-tagline-sub">Real · Local · Sin vueltas</p> -->
       </div>
     </div>
   </div>
 
+  
+  <!-- BENEFITS -->
+  <section class="lp-section">
+    <div class="container">
+      <div class="lp-section-label">Con qué trabajamos</div>
+      <h2 class="lp-section-title">Tecnología y materiales</h2>
+      <div class="lp-ben-grid">
+        <div class="lp-ben-card">
+          <h3 class="lp-ben-title">PLA</h3>
+          <div class="lp-ben-text">
+            Material principal de trabajo. Derivado de recursos naturales, no tóxico y con excelente calidad visual.
+            Ideal para prototipos, decoración y piezas de uso liviano.
+          </div>
+          <span class="lp-gcard-tag">Ecológico</span>
+        </div>
+        <div class="lp-ben-card">
+          <h3 class="lp-ben-title">PETG</h3>
+          <div class="lp-ben-text">
+            Material más resistente al calor y a la fricción. Ideal para piezas funcionales.
+          </div>
+          <span class="lp-gcard-tag">Resistente</span>
+        </div>
+        <div class="lp-ben-card">
+          <h3 class="lp-ben-title">ABS</h3>
+          <div class="lp-ben-text">
+            Material técnico con alta resistencia mecánica. Para proyectos específicos.
+          </div>
+          <span class="lp-gcard-tag">Técnico</span>
+        </div>
+        <div class="lp-ben-card">
+          <h3 class="lp-ben-title">ASA</h3>
+          <div class="lp-ben-text">
+             Material técnico similar al ABS, pero con alta resistencia a rayos UV y condiciones climáticas. Ideal para piezas exteriores o expuestas al sol.
+          </div>
+          <span class="lp-gcard-tag">Exterior</span>
+        </div>
+        <div class="lp-ben-card">
+          <h3 class="lp-ben-title">Nylon</h3>
+          <div class="lp-ben-text">
+             Material altamente resistente, flexible y duradero. Excelente para piezas mecánicas, engranajes o componentes sometidos a esfuerzo.
+          </div>
+          <span class="lp-gcard-tag">Mecánico</span>
+        </div>
+        <div class="lp-ben-card">
+          <h3 class="lp-ben-title">Otros Materiales</h3>
+          <div class="lp-ben-text">
+             Para proyectos específicos o exigencias técnicas, trabajamos también con materiales industriales bajo pedido.
+          </div>
+          <span class="lp-gcard-tag">Bajo pedido</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- TRABAJOS REALIZADOS -->
   <section class="lp-section">
     <div class="container">
-      <div class="lp-section-label">Nuestro Catálogo</div>
-      <div class="lp-section-title">Lo que ya hicimos.</div>
-      <p class="lp-section-sub">Fotos reales de piezas fabricadas en PLA. Sin filtros, sin renders.</p>
+      <div class="lp-section-label">Esto es lo que hacemos</div>
+      <h2 class="lp-section-title">Nuestro Catálogo</h2>
       <div class="lp-gallery-grid">
         <div class="lp-gcard">
           <div class="lp-gcard-img lp-gcard-ph" style="background:linear-gradient(135deg,#0d2029 0%,#0a2520 100%);display:flex;align-items:center;justify-content:center;">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="26" rx="10" ry="12" fill="#00c9a7" opacity=".13"/><circle cx="24" cy="14" r="5" fill="#00c9a7" opacity=".22"/><text x="24" y="44" text-anchor="middle" font-size="7" fill="#00c9a7" opacity=".35" font-family="monospace">foto</text></svg>
+            <img src="assets/img/soportes.png" alt="Soportes y accesorios">
           </div>
           <div class="lp-gcard-body">
-            <span class="lp-gcard-tag">Disponible</span>
-            <div class="lp-gcard-name">Soportes y accesorios</div>
-            <div class="lp-gcard-desc">Soporte notebook, soporte lentes VR + mandos, porta tarjetas/chips/pendrive, porta abanico, portacelular ajustable</div>
+            <h3 class="lp-gcard-name">Soportes y accesorios</h3>
+            <p class="lp-gcard-desc">Soporte notebook, soporte lentes VR + mandos, porta tarjetas/chips/pendrive, porta abanico, portacelular ajustable</p>
           </div>
         </div>
         <div class="lp-gcard">
           <div class="lp-gcard-img lp-gcard-ph" style="background:linear-gradient(135deg,#0a1f2a 0%,#0d2820 100%);display:flex;align-items:center;justify-content:center;">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="18" y="10" width="12" height="6" rx="2" fill="#00c9a7" opacity=".2"/><rect x="16" y="18" width="16" height="7" rx="2" fill="#00c9a7" opacity=".2"/><rect x="18" y="27" width="12" height="6" rx="2" fill="#00c9a7" opacity=".2"/><text x="24" y="44" text-anchor="middle" font-size="7" fill="#00c9a7" opacity=".35" font-family="monospace">foto</text></svg>
+            <img src="assets/img/juguetes.png" alt="Decoración y juguetes">
           </div>
           <div class="lp-gcard-body">
-            <span class="lp-gcard-tag">Disponible</span>
-            <div class="lp-gcard-name">Decoración y juguetes</div>
-            <div class="lp-gcard-desc">Maceteros, decoración para el hogar. Piezas móviles impresas en un solo proceso.  Figuras articuladas, juguetes antistrés, figura robótica</div>
+            <h3 class="lp-gcard-name">Decoración y juguetes</h3>
+            <p class="lp-gcard-desc">Maceteros, decoración para el hogar. Piezas móviles impresas en un solo proceso.  Figuras articuladas, juguetes antistrés, figura robótica</p>
           </div>
         </div>
         <div class="lp-gcard">
           <div class="lp-gcard-img lp-gcard-ph" style="background:linear-gradient(135deg,#0d2225 0%,#0a2318 100%);display:flex;align-items:center;justify-content:center;">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 12 L32 28 L24 36 L16 28 Z" fill="#00c9a7" opacity=".15"/><path d="M24 18 L29 28 L24 33 L19 28 Z" fill="#00c9a7" opacity=".2"/><text x="24" y="44" text-anchor="middle" font-size="7" fill="#00c9a7" opacity=".35" font-family="monospace">foto</text></svg>
+            <img src="assets/img/utilitarios.png" alt="Utilitarios">
           </div>
           <div class="lp-gcard-body">
-            <span class="lp-gcard-tag">Disponible</span>
-            <div class="lp-gcard-name">Utilitarios</div>
-            <div class="lp-gcard-desc">Pastilleros, calibre, máquina enrolladora de filamento, toroidal/psicodélico (objeto decorativo/funcional)</div>
+            <h3 class="lp-gcard-name">Utilitarios</h3>
+            <p class="lp-gcard-desc">Pastilleros, calibre, máquina enrolladora de filamento, toroidal/psicodélico (objeto decorativo/funcional)</p>
           </div>
         </div>
         <div class="lp-gcard">
           <div class="lp-gcard-img lp-gcard-ph" style="background:linear-gradient(135deg,#0d2225 0%,#0a2318 100%);display:flex;align-items:center;justify-content:center;">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 12 L32 28 L24 36 L16 28 Z" fill="#00c9a7" opacity=".15"/><path d="M24 18 L29 28 L24 33 L19 28 Z" fill="#00c9a7" opacity=".2"/><text x="24" y="44" text-anchor="middle" font-size="7" fill="#00c9a7" opacity=".35" font-family="monospace">foto</text></svg>
+           <img src="assets/img/regalos.png" alt="Regalos y souvenirs">
           </div>
           <div class="lp-gcard-body">
-            <span class="lp-gcard-tag">Disponible</span>
-            <div class="lp-gcard-name">Regalos y souvenirs</div>
-            <div class="lp-gcard-desc">Alto nivel de detalle. Ideal para souvenir, regalo o colección temática.</div>
+            <h3 class="lp-gcard-name">Regalos y souvenirs</h3>
+            <p class="lp-gcard-desc">Alto nivel de detalle. Ideal para souvenir, regalos corporativos o colección temática.</p>
           </div>
         </div>
       </div>
@@ -118,7 +174,7 @@
       <div class="lp-process-grid">
         <div class="lp-process-intro">
           <div class="lp-section-label">Cómo funciona</div>
-          <div class="lp-section-title">Simple y sin vueltas.</div>
+          <h2 class="lp-section-title">Simple y sin vueltas.</h2>
           <p>No hace falta tener todo definido. Con una idea, una foto o una referencia ya podemos evaluar si es posible y darte un presupuesto.</p>
         </div>
         <div class="lp-process-steps">
@@ -131,32 +187,42 @@
     </div>
   </section>
 
-  <!-- BENEFITS -->
-  <section class="lp-section">
-    <div class="container">
-      <div class="lp-section-label">Por qué elegirnos</div>
-      <div class="lp-section-title">Lo que nos diferencia.</div>
-      <div class="lp-ben-grid">
-        <div class="lp-ben-card"><div class="lp-ben-icon">◎</div><div class="lp-ben-title">Sin cantidad mínima</div><div class="lp-ben-text">Pedís desde 1 unidad. Ideal para probar antes de encargar más.</div></div>
-        <div class="lp-ben-card"><div class="lp-ben-icon">◈</div><div class="lp-ben-title">Personalización real</div><div class="lp-ben-text">Color, tamaño, logo. Si tenés una referencia, lo evaluamos juntos.</div></div>
-        <div class="lp-ben-card"><div class="lp-ben-icon">✦</div><div class="lp-ben-title">Precio transparente</div><div class="lp-ben-text">Trato directo con quien fabrica. Sin intermediarios ni costos ocultos.</div></div>
-        <div class="lp-ben-card"><div class="lp-ben-icon">↗</div><div class="lp-ben-title">Honestidad ante todo</div><div class="lp-ben-text">Si algo no es posible con lo que tenemos hoy, te lo decimos sin rodeos.</div></div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section class="lp-section">
     <div class="container">
       <div class="lp-section-label">FAQ</div>
-      <div class="lp-section-title">Preguntas frecuentes.</div>
+      <h2 class="lp-section-title">Preguntas frecuentes.</h2>
+
       <div class="lp-faq-grid">
-        <div class="lp-faq-item"><div class="lp-faq-q">¿Puedo pedir algo que no está en el catálogo?</div><div class="lp-faq-a">Sí. Escribinos con tu idea o referencia y evaluamos si es posible. Usamos plantillas de diseño y también tomamos pedidos específicos según la complejidad.</div></div>
-        <div class="lp-faq-item"><div class="lp-faq-q">¿Cuánto tarda un pedido?</div><div class="lp-faq-a">Depende del producto y la cantidad. Siempre te informamos el tiempo estimado antes de confirmar.</div></div>
-        <div class="lp-faq-item"><div class="lp-faq-q">¿En qué colores está disponible?</div><div class="lp-faq-a">Contamos con varios colores de filamento PLA. Consultanos disponibilidad para tu pedido específico.</div></div>
-        <div class="lp-faq-item"><div class="lp-faq-q">¿El PLA es resistente para uso cotidiano?</div><div class="lp-faq-a">Sí, para uso en interiores y temperatura ambiente es muy bueno: liviano, firme y duradero. No es apto para exposición a calor intenso o cargas mecánicas fuertes.</div></div>
-        <div class="lp-faq-item"><div class="lp-faq-q">¿Cómo coordinamos la entrega?</div><div class="lp-faq-a">Por envío o en mano según tu ubicación. El costo de envío se informa antes de confirmar el pedido.</div></div>
-        <div class="lp-faq-item"><div class="lp-faq-q">¿Qué pasa si el resultado no es el esperado?</div><div class="lp-faq-a">Lo hablamos. Si hubo un error de nuestra parte, lo resolvemos. Nos importa que quedes conforme con tu pedido.</div></div>
+        <div class="lp-faq-item">
+          <div class="lp-faq-q">¿Puedo pedir algo que no está en el catálogo?</div>
+          <div class="lp-faq-a">Sí. Podés enviarnos una idea, foto, referencia o necesidad concreta. Evaluamos si es posible imprimirlo, qué material conviene y te pasamos un presupuesto.</div>
+        </div>
+
+        <div class="lp-faq-item">
+          <div class="lp-faq-q">¿Trabajan regalos empresariales?</div>
+          <div class="lp-faq-a">Sí. Hacemos regalos corporativos, souvenirs, porta celulares, organizadores de escritorio y accesorios personalizados para empresas, eventos, clientes o colaboradores.</div>
+        </div>
+
+        <div class="lp-faq-item">
+          <div class="lp-faq-q">¿Se pueden personalizar con logo, nombre o color?</div>
+          <div class="lp-faq-a">Sí. Podemos personalizar colores, nombres, logos o detalles simples según el tipo de pieza y la complejidad del diseño.</div>
+        </div>
+
+        <div class="lp-faq-item">
+          <div class="lp-faq-q">¿Qué material conviene usar?</div>
+          <div class="lp-faq-a">Para prototipos, decoración y piezas livianas usamos principalmente PLA. Para piezas más funcionales o con mayor desgaste puede convenir PETG, ABS, ASA o Nylon.</div>
+        </div>
+
+        <div class="lp-faq-item">
+          <div class="lp-faq-q">¿Cuánto tarda un pedido?</div>
+          <div class="lp-faq-a">Depende del tamaño, material, cantidad y nivel de detalle. Siempre informamos el tiempo estimado antes de confirmar el trabajo.</div>
+        </div>
+
+        <div class="lp-faq-item">
+          <div class="lp-faq-q">¿Hacen producción por cantidad?</div>
+          <div class="lp-faq-a">Sí. Podemos trabajar pedidos unitarios o producción a pedido para empresas, eventos o emprendimientos, según disponibilidad y complejidad.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -165,7 +231,7 @@
   <section class="lp-final">
     <div class="container">
       <h2>¿Tenés algo en mente?<br><em>Escribinos y lo vemos.</em></h2>
-      <p class="lp-final-sub">Con una idea, una foto o una referencia ya podemos decirte si es posible y cuánto sale.</p>
+      <p class="lp-final-sub">Con una idea, una foto o una referencia ya podemos decirte si es posible y presupuestarlo</p>
       <div class="lp-final-ctas">
         <button class="lp-btn-primary">Hacer una consulta ↗</button>
         <button class="lp-btn-ghost">Ver catálogo</button>
@@ -183,7 +249,7 @@
   <footer class="lp-footer">
     <div class="lp-footer-inner">
       <div class="lp-footer-logo">FORMA<span>3D</span></div>
-      <div class="lp-footer-text">Impresión 3D en PLA · Emprendimiento local</div>
+      <div class="lp-footer-text">Impresión 3D · Emprendimiento local</div>
     </div>
   </footer>
 
