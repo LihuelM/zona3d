@@ -109,7 +109,7 @@
     .lp-hero-full {
      position: relative;
      width: 100%;
-     height: clamp(430px, 65vh, 620px);
+     height: clamp(360px, 58vh, 540px);
      border-bottom: 1px solid var(--border);
      overflow: hidden;
     }
@@ -119,7 +119,7 @@
     .canvas-ui {
       position: absolute; inset: 0; pointer-events: none;
       display: flex; flex-direction: column; justify-content: space-between;
-      padding: 28px 36px;
+      padding: 35px;
     }
     .cu-top { display: flex; justify-content: flex-end; }
     .cu-badge {
