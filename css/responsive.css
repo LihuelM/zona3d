@@ -1,11 +1,23 @@
 /* =========================================================
-   RESPONSIVE — FORMA3D
+   RESPONSIVE — ZONA3D
    Ordenado por tamaño de pantalla
 ========================================================= */
 
 
 /* =========================================================
-   TABLET / NOTEBOOK CHICO
+   NOTEBOOK / TABLET HORIZONTAL
+   Hasta 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE GRANDE
    Hasta 900px
 ========================================================= */
 
@@ -17,11 +29,16 @@
   .lp-ben-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 
 /* =========================================================
-   TABLET / MOBILE GRANDE
+   TABLET / MOBILE
    Hasta 768px
 ========================================================= */
 
@@ -48,6 +65,10 @@
   .lp-footer-inner {
     padding: 22px 20px;
   }
+
+  .masonry-grid {
+    column-count: 2;
+  }
 }
 
 
@@ -62,17 +83,127 @@
   }
 
   .lp-cards-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .lp-faq-grid {
     grid-template-columns: 1fr;
+  }
+
+  .catalog-hero {
+    padding: 72px 0 44px;
+  }
+
+  .catalog-tags {
+    gap: 8px;
+  }
+
+  .catalog-tags span {
+    font-size: 11px;
   }
 }
 
 
 /* =========================================================
    MOBILE CHICO
+   Hasta 500px
+========================================================= */
+
+@media (max-width: 500px) {
+  .desktop-masonry {
+    display: none;
+  }
+
+  .mobile-catalog-slider {
+    padding: 72px 0 56px;
+  }
+
+  .peek-wrapper {
+    margin-top: 20px;
+  }
+
+  .peek-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .peek-counter {
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+
+  .peek-arrows {
+    display: flex;
+    gap: 10px;
+  }
+
+  .peek-arrow {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--border-bright);
+    background: transparent;
+    color: var(--teal);
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+ .peek-viewport {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  padding: 0;
+}
+
+.peek-track {
+  display: flex;
+  gap: 4px;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.peek-slide {
+  flex: 0 0 74%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.45;
+  transform: scale(0.92);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.peek-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.peek-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  border: 1px solid var(--teal);
+}
+
+  .catalog-cta-center {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 28px;
+  }
+
+  .catalog-cta-center a {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* =========================================================
+   MOBILE MUY CHICO
    Hasta 480px
 ========================================================= */
 
@@ -89,8 +220,9 @@
     grid-template-columns: 1fr;
   }
 
+  .lp-nav-ghost,
   .lp-nav-cta {
-    padding: 8px 14px;
+    padding: 4px 12px;
     font-size: 12px;
   }
 
@@ -101,62 +233,230 @@
   .lp-final {
     padding: 64px 0;
   }
-}
 
-/* Catalogo */
-@media (max-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .catalog-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 640px) {
-  .catalog-hero {
-    padding: 72px 0 44px;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .catalog-tags {
-    gap: 8px;
-  }
-
-  .catalog-tags span {
-    font-size: 11px;
-  }
-}
-@media (max-width: 1024px) {
-  .masonry-grid {
-    column-count: 3;
-  }
-}
-
-@media (max-width: 768px) {
-  .masonry-grid {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 480px) {
   .masonry-grid {
     column-count: 1;
   }
 }
-@media (max-width: 500px) {
-  .catalog-cta-center {
-    flex-direction: column;
-    align-items: center;
+/* =========================================================
+   HOME MOBILE — MATERIAL TABS + WORKS SLIDER
+========================================================= */
+
+.mat-tabs-mobile,
+.home-works-slider-mobile {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .lp-ben-grid,
+  .lp-gallery-grid {
+    display: none;
   }
 
-  .catalog-cta-center a {
-    width: 100%;
-    max-width: 280px;
+  .mat-tabs-mobile,
+  .home-works-slider-mobile {
+    display: block;
   }
+
+  .mat-tabs-nav {
+    display: flex;
+    gap: 28px;
+    margin: 28px 0 26px;
+    border-bottom: 1px solid var(--border);
+    overflow-x: none;
+  }
+
+  .mat-tab-btn {
+    background: transparent;
+    border: 0;
+    color: var(--text-muted);
+    font-family: var(--font-label);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 0 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .mat-tab-btn.active {
+    color: var(--teal);
+  }
+
+  .mat-tab-btn.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background: var(--teal);
+  }
+
+  .mat-tab-panel {
+    display: none;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px 24px;
+  }
+
+  .mat-tab-panel.active {
+    display: block;
+  }
+
+  .mat-tab-panel h3 {
+    font-family: var(--font-heading);
+    font-size: 25px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+
+  .mat-tab-panel p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 18px;
+  }
+
+  .home-works-slider-mobile {
+    margin-top: 28px;
+  }
+
+  .home-slider-viewport {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    overflow: hidden;
+    padding-left: 20px;
+  }
+
+  .home-slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.45s ease;
+    will-change: transform;
+  }
+
+  .home-slider-card {
+    flex: 0 0 78%;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .home-slider-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  .home-slider-body {
+    padding: 18px 18px 22px;
+  }
+
+  .home-slider-body h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .home-slider-body p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .home-slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .home-slider-dot {
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(122, 168, 160, 0.45);
+    cursor: pointer;
+    transition: width 0.25s, background 0.25s;
+  }
+
+  .home-slider-dot.active {
+    width: 28px;
+    background: var(--teal);
+  }
+}
+@media (max-width: 640px) {
+  .lp-faq-grid {
+    display: block;
+    margin-top: 28px;
+  }
+
+  .lp-faq-item {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 201, 167, 0.12);
+  }
+
+  .lp-faq-q {
+    position: relative;
+    padding: 20px 37px 13px 0;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    cursor: pointer;
+  }
+
+  .lp-faq-q::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 28px;
+    font-weight: 300;
+  }
+
+  .lp-faq-item.open .lp-faq-q {
+    color: var(--teal);
+  }
+
+  .lp-faq-item.open .lp-faq-q::after {
+    content: "−";
+    color: var(--teal);
+  }
+
+  .lp-faq-a {
+    padding: 0 0 17px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+
+  .lp-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: 
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.lp-faq-item.open .lp-faq-a {
+  max-height: 300px; /* suficiente para contenido */
+  opacity: 1;
+  transform: translateY(0);
+}
 }

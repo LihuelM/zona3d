@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Catálogo de productos 3D | ZONA3D</title>
-  <meta name="description" content="Catálogo de productos impresos en 3D: macetas, soportes, accesorios, utilitarios, decoración y regalos personalizados en Formosa." />
+  <title>Galería de productos 3D | ZONA3D</title>
+  <meta name="description" content="Galería de productos impresos en 3D: macetas, soportes, accesorios, utilitarios, decoración y regalos personalizados en Formosa." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,14 +25,14 @@
 
         <div class="lp-nav-actions">
           <a href="./index.html" class="lp-nav-ghost">Volver al inicio</a>
-          <a href="https://wa.me/5490000000000" class="lp-nav-cta" target="_blank">Hacer una consulta ↗</a>
+          <a href="https://wa.me/5493516596644?text=Hola%20quiero%20consultar%20por%20un%20producto" class="lp-nav-cta" target="_blank">Consultar ↗</a>
         </div>
       </div>
     </nav>
 
     <section class="catalog-hero">
       <div class="container">
-        <span class="lp-section-label">Catálogo</span>
+        <span class="lp-section-label">Galería</span>
 
         <h1 class="catalog-title">
           <span class="line line-primary">PRODUCTOS</span>
@@ -52,9 +52,8 @@
       </div>
     </section>
 
-    <section class="lp-section catalog-section">
+    <section class="lp-section catalog-section desktop-masonry">
       <div class="container">
-
         <div class="catalog-header">
           <div>
             <span class="lp-section-label">Productos</span>
@@ -157,10 +156,40 @@
         </div>
 
         <div class="catalog-cta-center">
-          <a href="./index.html" class="lp-nav-ghost">Volver al inicio</a>
-          <a href="https://wa.me/5490000000000" class="lp-nav-cta" target="_blank">Hacer una consulta ↗</a>
-        </div>
+          <a href="./index.html" class="lp-nav-ghost">Volver al inicio</a>         
+           <a href="https://wa.me/5493516596644?text=Hola%20quiero%20consultar%20por%20un%20producto" class="lp-nav-cta" target="_blank">Hacer una consulta ↗</a>
 
+        </div>
+      </div>
+    </section>
+
+    <section class="mobile-catalog-slider">
+      <div class="container">
+        <h2 class="lp-section-title">Todos los trabajos</h2>
+      
+        <div class="peek-wrapper">
+          <div class="peek-header">
+            <div class="peek-counter">
+              <span id="peekCurrent">1</span> / <span id="peekTotal">23</span>
+            </div>
+          
+            <div class="peek-arrows">
+              <button id="peekPrev" class="peek-arrow" type="button">‹</button>
+              <button id="peekNext" class="peek-arrow" type="button">›</button>
+            </div>
+          </div>
+        
+          <div class="peek-viewport" id="peekViewport">
+            <div class="peek-track" id="peekTrack">
+              <!-- JS inyecta slides -->
+            </div>
+          </div>
+        </div>
+      
+        <div class="catalog-cta-center">
+          <a href="./index.html" class="lp-nav-ghost">Volver al inicio</a>
+          <a href="https://wa.me/5493516596644?text=Hola%20quiero%20consultar%20por%20un%20producto" class="lp-nav-cta" target="_blank">Consultar ↗</a>
+        </div>
       </div>
     </section>
 
@@ -173,30 +202,6 @@
 
   </main>
 
-  <div class="modal" id="imageModal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg" alt="Producto impreso en 3D ampliado">
-  </div>
-<script>
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("modalImg");
-
-document.querySelectorAll(".grid-item img").forEach(img => {
-  img.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImg.src = img.src;
-  });
-});
-
-document.querySelector(".close").onclick = () => {
-  modal.style.display = "none";
-};
-
-modal.onclick = (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-};
-</script>
+  <script src="./js/catalogo.js"></script>
 </body>
 </html>

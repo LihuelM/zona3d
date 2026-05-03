@@ -25,8 +25,8 @@
     <div class="lp-nav-inner">
       <div class="lp-logo">ZONA<span>3D</span></div>
       <div class="lp-nav-actions">
-        <button class="lp-nav-cta">Hacer una consulta ↗</button>
-        <a href="./catalogo.html" class="lp-nav-ghost">Ver catálogo</a>
+        <a href="https://wa.me/5493516596644?text=Hola%20quiero%20consultar%20por%20un%20producto" class="lp-nav-cta" target="_blank">Consultar ↗</a>
+        <a href="./catalogo.html" class="lp-nav-ghost">Ver Galería</a>
       </div>
     </div>
   </nav>
@@ -119,14 +119,63 @@
           <span class="lp-gcard-tag">Bajo pedido</span>
         </div>
       </div>
+
+      <div class="mat-tabs-mobile">
+    <div class="mat-tabs-nav">
+      <button class="mat-tab-btn active" data-tab="pla">PLA</button>
+      <button class="mat-tab-btn" data-tab="petg">PETG</button>
+      <button class="mat-tab-btn" data-tab="abs">ABS</button>
+      <button class="mat-tab-btn" data-tab="asa">ASA</button>
+      <button class="mat-tab-btn" data-tab="nylon">Nylon</button>
+      <button class="mat-tab-btn" data-tab="otros">Otros</button>
+    </div>
+  
+    <div class="mat-tab-panel active" id="tab-pla">
+      <h3>PLA</h3>
+      <span class="lp-gcard-tag">Ecológico</span>
+      <p>Material principal de trabajo. Derivado de recursos naturales, no tóxico y con excelente calidad visual. Ideal para prototipos, decoración y piezas de uso liviano.</p>
+    </div>
+  
+    <div class="mat-tab-panel" id="tab-petg">
+      <h3>PETG</h3>
+      <span class="lp-gcard-tag">Resistente</span>
+      <p>Material más resistente al calor y a la fricción. Ideal para piezas funcionales que necesitan mayor durabilidad.</p>
+    </div>
+  
+    <div class="mat-tab-panel" id="tab-abs">
+      <h3>ABS</h3>
+      <span class="lp-gcard-tag">Técnico</span>
+      <p>Material técnico con alta resistencia mecánica. Para proyectos específicos que necesitan mayor robustez.</p>
+    </div>
+  
+    <div class="mat-tab-panel" id="tab-asa">
+      <h3>ASA</h3>
+      <span class="lp-gcard-tag">Exterior</span>
+      <p>Material técnico similar al ABS, con alta resistencia a rayos UV. Ideal para piezas exteriores o expuestas al sol.</p>
+    </div>
+  
+    <div class="mat-tab-panel" id="tab-nylon">
+      <h3>Nylon</h3>
+      <span class="lp-gcard-tag">Mecánico</span>
+      <p>Material resistente, flexible y duradero. Excelente para piezas mecánicas o componentes sometidos a esfuerzo.</p>
+    </div>
+  
+    <div class="mat-tab-panel" id="tab-otros">
+      <h3>Otros</h3>
+      <span class="lp-gcard-tag">Bajo pedido</span>
+      <p>Para proyectos específicos o exigencias técnicas, también podemos evaluar otros materiales industriales bajo pedido.</p>
+    </div>
+  </div>
     </div>
   </section>
+
+  
 
   <!-- TRABAJOS REALIZADOS -->
   <section class="lp-section">
     <div class="container">
       <div class="lp-section-label">Esto es lo que hacemos</div>
-      <h2 class="lp-section-title">Nuestro Catálogo</h2>
+      <h2 class="lp-section-title">Nuestro Trabajo</h2>
       <div class="lp-gallery-grid">
         <div class="lp-gcard">
           <div class="lp-gcard-img lp-gcard-ph" style="background:linear-gradient(135deg,#0d2029 0%,#0a2520 100%);display:flex;align-items:center;justify-content:center;">
@@ -165,9 +214,50 @@
           </div>
         </div>
       </div>
-      
+      <div class="home-works-slider-mobile">
+  <div class="home-slider-viewport" id="homeViewport">
+    <div class="home-slider-track" id="homeTrack">
+
+      <article class="home-slider-card">
+        <img src="assets/img/juguetes.png" alt="Decoración y juguetes">
+        <div class="home-slider-body">
+          <h3>Decoración y juguetes</h3>
+          <p>Maceteros, figuras articuladas, juguetes antiestrés y figura robótica.</p>
+        </div>
+      </article>
+
+      <article class="home-slider-card">
+        <img src="assets/img/utilitarios.png" alt="Utilitarios">
+        <div class="home-slider-body">
+          <h3>Utilitarios</h3>
+          <p>Pastilleros, calibre, organizadores y accesorios funcionales.</p>
+        </div>
+      </article>
+
+      <article class="home-slider-card">
+        <img src="assets/img/soportes.png" alt="Soportes y accesorios">
+        <div class="home-slider-body">
+          <h3>Soportes y accesorios</h3>
+          <p>Soportes para notebook, lentes, celular, tarjetas y pendrive.</p>
+        </div>
+      </article>
+
+      <article class="home-slider-card">
+        <img src="assets/img/regalos.png" alt="Regalos y souvenirs">
+        <div class="home-slider-body">
+          <h3>Regalos y souvenirs</h3>
+          <p>Opciones para regalos corporativos, souvenirs o colección temática.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="home-slider-dots" id="homeDots"></div>
+</div>
+
       <div class="catalog-cta-center">
-        <a href="./catalogo.html" class="lp-btn-ghost">Ver catálogo</a>
+        <a href="./catalogo.html" class="lp-btn-ghost">Ir a la Galería</a>
       </div>
     </div>
   </section>
@@ -259,6 +349,7 @@
 </div><!-- /lp-content -->
 
 <script type="module" src="./js/main.js"></script>
+<script src="./js/home.js"></script>
 
 </body>
 </html>
