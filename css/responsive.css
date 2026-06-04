@@ -11,7 +11,7 @@
 
 @media (max-width: 1024px) {
   .masonry-grid {
-    column-count: 3;
+    column-count: 4;
   }
 }
 
@@ -67,7 +67,7 @@
   }
 
   .masonry-grid {
-    column-count: 2;
+    column-count: 4;
   }
 }
 
@@ -100,6 +100,10 @@
 
   .catalog-tags span {
     font-size: 11px;
+  }
+
+  .mobile-catalog-slider{
+    display: block;
   }
 }
 

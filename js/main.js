@@ -241,6 +241,36 @@ controls.enabled = false;
 controls.minDistance = 6; controls.maxDistance = 60;
 controls.maxPolarAngle = Math.PI * .52;
 
+canvas.addEventListener(
+  "wheel",
+  (event) => {
+    if (!controls.enabled) return;
+
+    const distance = camera.position.distanceTo(controls.target);
+    const isZoomingIn = event.deltaY < 0;
+    const isZoomingOut = event.deltaY > 0;
+
+    const reachedMinZoom = distance <= controls.minDistance + 0.4;
+    const reachedMaxZoom = distance >= controls.maxDistance - 0.4;
+
+    const shouldScrollPage =
+      (isZoomingIn && reachedMinZoom) ||
+      (isZoomingOut && reachedMaxZoom);
+
+    if (!shouldScrollPage) return;
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    window.scrollBy({
+      top: event.deltaY,
+      left: 0,
+      behavior: "auto",
+    });
+  },
+  { capture: true, passive: false }
+);
+
 // ── ANIMATION STATE ───────────────────────────────────────────────────────
 const clock = new THREE.Clock();
 const T = { INTRO: 1.2, HOME: .65, PRINT: 5.5, ORBIT: 2.0 };

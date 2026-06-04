@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  
+  <defs>
+    
+    <linearGradient id="fg" x1="0" y1="30" x2="0" y2="68" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5BF3D8"></stop>
+      <stop offset="86%" stop-color="#1FE6C4"></stop>
+    </linearGradient>
+    
+    <pattern id="fsp" x="0" y="30" width="120" height="7" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="120" height="4" fill="white"></rect>
+    </pattern>
+    <mask id="fsm" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+      <rect x="0" y="0" width="100" height="100" fill="url(#fsp)"></rect>
+    </mask>
+  </defs>
+  
+  <text x="50" y="68" text-anchor="middle" font-family="&#39;Space Grotesk&#39;, sans-serif" font-weight="700" font-size="50" letter-spacing="-2" fill="url(#fg)" mask="url(#fsm)">Z3D</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395 100">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="6" x2="0" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5BF3D8"></stop>
+      <stop offset="86%" stop-color="#1FE6C4"></stop>
+    </linearGradient>
+    <pattern id="sp" x="0" y="6" width="500" height="16.5" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="500" height="9.5" fill="white"></rect>
+    </pattern>
+    <mask id="sm" maskUnits="userSpaceOnUse" x="0" y="0" width="395" height="100">
+      <rect x="0" y="0" width="395" height="100" fill="url(#sp)"></rect>
+    </mask>
+  </defs>
+  <text x="0" y="88" font-family="&#39;Space Grotesk&#39;, sans-serif" font-weight="700" font-size="116" letter-spacing="-4" fill="url(#grad)" mask="url(#sm)">Z3D</text>
+  <text x="245" y="48" font-family="&#39;Space Grotesk&#39;, sans-serif" font-weight="700" font-size="50" letter-spacing="-1.5" fill="#FFFFFF">zona</text>
+  <text x="247" y="82" font-family="&#39;JetBrains Mono&#39;, monospace" font-weight="400" font-size="13" letter-spacing="3.64" fill="#FFFFFF" fill-opacity="0.45">IMPRESIÓN 3D</text>
+</svg>

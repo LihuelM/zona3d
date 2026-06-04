@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZONA3D — Impresión 3D en PLA</title>
+  <title>ZONA3D</title>
+
+  <link rel="icon" href="./assets/img/z3d-favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/img/z3d-favicon.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
@@ -23,7 +27,9 @@
   <!-- NAV -->
   <nav class="lp-nav">
     <div class="lp-nav-inner">
-      <div class="lp-logo">ZONA<span>3D</span></div>
+      <a href="./index.html" class="lp-logo">
+        <img src="./assets/img/zona3d-logo.svg" alt="ZONA3D Logo">
+      </a>
       <div class="lp-nav-actions">
         <a href="https://wa.me/5493516596644?text=Hola%20quiero%20consultar%20por%20un%20producto" class="lp-nav-cta" target="_blank">Consultar ↗</a>
         <a href="./catalogo.html" class="lp-nav-ghost">Ver Galería</a>
@@ -58,7 +64,7 @@
   <div class="lp-tagline-bar">
     <div class="container">
       <div class="lp-tagline-box">
-        <h1 class="lp-tagline-h1">Impresión 3D en Formosa</h1>
+        <h1 class="lp-tagline-h1">Zona Impresión 3D</h1>
         <p class="lp-section-sub">
           Creamos regalos personalizados y accesorios funcionales para empresas, eventos y profesionales. <br>
           Diseños modernos, producción a pedido y personalización simple.
@@ -121,55 +127,53 @@
       </div>
 
       <div class="mat-tabs-mobile">
-    <div class="mat-tabs-nav">
-      <button class="mat-tab-btn active" data-tab="pla">PLA</button>
-      <button class="mat-tab-btn" data-tab="petg">PETG</button>
-      <button class="mat-tab-btn" data-tab="abs">ABS</button>
-      <button class="mat-tab-btn" data-tab="asa">ASA</button>
-      <button class="mat-tab-btn" data-tab="nylon">Nylon</button>
-      <button class="mat-tab-btn" data-tab="otros">Otros</button>
-    </div>
-  
-    <div class="mat-tab-panel active" id="tab-pla">
-      <h3>PLA</h3>
-      <span class="lp-gcard-tag">Ecológico</span>
-      <p>Material principal de trabajo. Derivado de recursos naturales, no tóxico y con excelente calidad visual. Ideal para prototipos, decoración y piezas de uso liviano.</p>
-    </div>
-  
-    <div class="mat-tab-panel" id="tab-petg">
-      <h3>PETG</h3>
-      <span class="lp-gcard-tag">Resistente</span>
-      <p>Material más resistente al calor y a la fricción. Ideal para piezas funcionales que necesitan mayor durabilidad.</p>
-    </div>
-  
-    <div class="mat-tab-panel" id="tab-abs">
-      <h3>ABS</h3>
-      <span class="lp-gcard-tag">Técnico</span>
-      <p>Material técnico con alta resistencia mecánica. Para proyectos específicos que necesitan mayor robustez.</p>
-    </div>
-  
-    <div class="mat-tab-panel" id="tab-asa">
-      <h3>ASA</h3>
-      <span class="lp-gcard-tag">Exterior</span>
-      <p>Material técnico similar al ABS, con alta resistencia a rayos UV. Ideal para piezas exteriores o expuestas al sol.</p>
-    </div>
-  
-    <div class="mat-tab-panel" id="tab-nylon">
-      <h3>Nylon</h3>
-      <span class="lp-gcard-tag">Mecánico</span>
-      <p>Material resistente, flexible y duradero. Excelente para piezas mecánicas o componentes sometidos a esfuerzo.</p>
-    </div>
-  
-    <div class="mat-tab-panel" id="tab-otros">
-      <h3>Otros</h3>
-      <span class="lp-gcard-tag">Bajo pedido</span>
-      <p>Para proyectos específicos o exigencias técnicas, también podemos evaluar otros materiales industriales bajo pedido.</p>
-    </div>
-  </div>
+        <div class="mat-tabs-nav">
+          <button class="mat-tab-btn active" data-tab="pla">PLA</button>
+          <button class="mat-tab-btn" data-tab="petg">PETG</button>
+          <button class="mat-tab-btn" data-tab="abs">ABS</button>
+          <button class="mat-tab-btn" data-tab="asa">ASA</button>
+          <button class="mat-tab-btn" data-tab="nylon">Nylon</button>
+          <button class="mat-tab-btn" data-tab="otros">Otros</button>
+        </div>
+      
+        <div class="mat-tab-panel active" id="tab-pla">
+          <h3>PLA</h3>
+          <span class="lp-gcard-tag">Ecológico</span>
+          <p>Material principal de trabajo. Derivado de recursos naturales, no tóxico y con excelente calidad visual. Ideal para prototipos, decoración y piezas de uso liviano.</p>
+        </div>
+      
+        <div class="mat-tab-panel" id="tab-petg">
+          <h3>PETG</h3>
+          <span class="lp-gcard-tag">Resistente</span>
+          <p>Material más resistente al calor y a la fricción. Ideal para piezas funcionales que necesitan mayor durabilidad.</p>
+        </div>
+      
+        <div class="mat-tab-panel" id="tab-abs">
+          <h3>ABS</h3>
+          <span class="lp-gcard-tag">Técnico</span>
+          <p>Material técnico con alta resistencia mecánica. Para proyectos específicos que necesitan mayor robustez.</p>
+        </div>
+      
+        <div class="mat-tab-panel" id="tab-asa">
+          <h3>ASA</h3>
+          <span class="lp-gcard-tag">Exterior</span>
+          <p>Material técnico similar al ABS, con alta resistencia a rayos UV. Ideal para piezas exteriores o expuestas al sol.</p>
+        </div>
+      
+        <div class="mat-tab-panel" id="tab-nylon">
+          <h3>Nylon</h3>
+          <span class="lp-gcard-tag">Mecánico</span>
+          <p>Material resistente, flexible y duradero. Excelente para piezas mecánicas o componentes sometidos a esfuerzo.</p>
+        </div>
+      
+        <div class="mat-tab-panel" id="tab-otros">
+          <h3>Otros</h3>
+          <span class="lp-gcard-tag">Bajo pedido</span>
+          <p>Para proyectos específicos o exigencias técnicas, también podemos evaluar otros materiales industriales bajo pedido.</p>
+        </div>
+      </div>
     </div>
   </section>
-
-  
 
   <!-- TRABAJOS REALIZADOS -->
   <section class="lp-section">
@@ -215,46 +219,46 @@
         </div>
       </div>
       <div class="home-works-slider-mobile">
-  <div class="home-slider-viewport" id="homeViewport">
-    <div class="home-slider-track" id="homeTrack">
-
-      <article class="home-slider-card">
-        <img src="assets/img/juguetes.png" alt="Decoración y juguetes">
-        <div class="home-slider-body">
-          <h3>Decoración y juguetes</h3>
-          <p>Maceteros, figuras articuladas, juguetes antiestrés y figura robótica.</p>
+        <div class="home-slider-viewport" id="homeViewport">
+          <div class="home-slider-track" id="homeTrack">
+          
+            <article class="home-slider-card">
+              <img src="assets/img/juguetes.png" alt="Decoración y juguetes">
+              <div class="home-slider-body">
+                <h3>Decoración y juguetes</h3>
+                <p>Maceteros, figuras articuladas, juguetes antiestrés y figura robótica.</p>
+              </div>
+            </article>
+          
+            <article class="home-slider-card">
+              <img src="assets/img/utilitarios.png" alt="Utilitarios">
+              <div class="home-slider-body">
+                <h3>Utilitarios</h3>
+                <p>Pastilleros, calibre, organizadores y accesorios funcionales.</p>
+              </div>
+            </article>
+          
+            <article class="home-slider-card">
+              <img src="assets/img/soportes.png" alt="Soportes y accesorios">
+              <div class="home-slider-body">
+                <h3>Soportes y accesorios</h3>
+                <p>Soportes para notebook, lentes, celular, tarjetas y pendrive.</p>
+              </div>
+            </article>
+          
+            <article class="home-slider-card">
+              <img src="assets/img/regalos.png" alt="Regalos y souvenirs">
+              <div class="home-slider-body">
+                <h3>Regalos y souvenirs</h3>
+                <p>Opciones para regalos corporativos, souvenirs o colección temática.</p>
+              </div>
+            </article>
+          
+          </div>
         </div>
-      </article>
-
-      <article class="home-slider-card">
-        <img src="assets/img/utilitarios.png" alt="Utilitarios">
-        <div class="home-slider-body">
-          <h3>Utilitarios</h3>
-          <p>Pastilleros, calibre, organizadores y accesorios funcionales.</p>
-        </div>
-      </article>
-
-      <article class="home-slider-card">
-        <img src="assets/img/soportes.png" alt="Soportes y accesorios">
-        <div class="home-slider-body">
-          <h3>Soportes y accesorios</h3>
-          <p>Soportes para notebook, lentes, celular, tarjetas y pendrive.</p>
-        </div>
-      </article>
-
-      <article class="home-slider-card">
-        <img src="assets/img/regalos.png" alt="Regalos y souvenirs">
-        <div class="home-slider-body">
-          <h3>Regalos y souvenirs</h3>
-          <p>Opciones para regalos corporativos, souvenirs o colección temática.</p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-
-  <div class="home-slider-dots" id="homeDots"></div>
-</div>
+      
+        <div class="home-slider-dots" id="homeDots"></div>
+      </div>
 
       <div class="catalog-cta-center">
         <a href="./catalogo.html" class="lp-btn-ghost">Ir a la Galería</a>
@@ -269,7 +273,7 @@
         <div class="lp-process-intro">
           <div class="lp-section-label">Cómo funciona</div>
           <h2 class="lp-section-title">Simple y sin vueltas.</h2>
-          <p>No hace falta tener todo definido. Con una idea, una foto o una referencia ya podemos evaluar si es posible y darte un presupuesto.</p>
+          <p>No hace falta tener todo definido. Con una idea, una foto de alta calidad o un archivo STL, podemos evaluar si es posible y darte un presupuesto.</p>
         </div>
         <div class="lp-process-steps">
           <div class="lp-process-step"><div class="lp-step-num">01</div><div><div class="lp-step-title">Contanos qué necesitás</div><div class="lp-step-text">Producto, referencia, foto o idea — cualquier punto de partida sirve.</div></div></div>
@@ -327,7 +331,9 @@
       <h2>¿Tenés algo en mente?<br><em>Escribinos y lo vemos.</em></h2>
       <p class="lp-final-sub">Con una idea, una foto o una referencia ya podemos decirte si es posible y presupuestarlo</p>
       <div class="lp-final-ctas">
-        <button class="lp-btn-primary">Hacer una consulta ↗</button>
+        <!-- <button class="lp-btn-primary">Hacer una consulta ↗</button> -->
+        <a class="lp-btn-primary" href="https://wa.me/5493516596644?text=Hola%20quiero%20consultar%20por%20un%20producto" target="_blank">Hacer una consulta ↗</a>
+
       </div>
       <div class="lp-trust-bar">
         <div class="lp-trust-item">Sin mínimo de unidades</div>
@@ -341,7 +347,9 @@
   <!-- FOOTER -->
   <footer class="lp-footer">
     <div class="lp-footer-inner">
-      <div class="lp-footer-logo">FORMA<span>3D</span></div>
+      <a href="./index.html" class="lp-logo">
+        <img src="./assets/img/zona3d-logo.svg" alt="ZONA3D Logo">
+      </a>
       <div class="lp-footer-text">Impresión 3D · Emprendimiento local</div>
     </div>
   </footer>
