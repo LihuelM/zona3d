@@ -1,62 +1,94 @@
+const BASE = "./assets/img/img_products/";
 
+const products = [
+  { src: "brazo_robotico.png", category: "decoracion" },
+  { src: "porta_abanico_c.png", category: "soportes" },
+  { src: "juego.png", category: "decoracion" },
+  { src: "dragon_verde.png", category: "decoracion" },
+  { src: "calabazas.png", category: "decoracion" },
+  { src: "calibre.png", category: "utilitarios" },
+  { src: "decoracion_beta.png", category: "decoracion" },
+  { src: "decoracion_mano.png", category: "decoracion" },
+  { src: "llavero_vaca.png", category: "regalos" },
+  { src: "dragon_azul.png", category: "decoracion" },
+  { src: "maceta_gato.png", category: "decoracion" },
+  { src: "maceta_groot.png", category: "decoracion" },
+  { src: "mano_articulada.png", category: "decoracion" },
+  { src: "porta_abanico_a.png", category: "soportes" },
+  { src: "portabombones.png", category: "regalos" },
+  { src: "psicodelico.png", category: "decoracion" },
+  { src: "caballo.png", category: "decoracion" },
+  { src: "pastillero_2.png", category: "utilitarios" },
+  { src: "soporte_card_pendrive.png", category: "soportes" },
+  { src: "soporte_cel.png", category: "soportes" },
+  { src: "soporte_lentes3d.png", category: "soportes" },
+  { src: "soporte_notebook_1.png", category: "soportes" },
+  { src: "pastillero_1.png", category: "utilitarios" }
+];
+
+const masonryGrid = document.querySelector(".masonry-grid");
 const track = document.getElementById("peekTrack");
 const prev = document.getElementById("peekPrev");
 const next = document.getElementById("peekNext");
 const currentLabel = document.getElementById("peekCurrent");
 const totalLabel = document.getElementById("peekTotal");
+const tabs = document.querySelectorAll(".catalog-tab");
 
-const images = [
-  "brazo_robotico.png",
-  "porta_abanico_c.png",
-  "juego.png",
-  "dragon_verde.png",
-  "calabazas.png",
-  "calibre.png",
-  "decoracion_beta.png",
-  "decoracion_mano.png",
-  "llavero_vaca.png",
-  "dragon_azul.png",
-  "maceta_gato.png",
-  "maceta_groot.png",
-  "mano_articulada.png",
-  "porta_abanico_a.png",
-  "portabombones.png",
-  "psicodelico.png",
-  "caballo.png",
-  "pastillero_2.png",
-  "soporte_card_pendrive.png",
-  "soporte_cel.png",
-  "soporte_lentes3d.png",
-  "soporte_notebook_1.png",
-  "pastillero_1.png"
-];
-
-const BASE = "./assets/img/img_products/";
-
+let filteredProducts = [...products];
 let index = 0;
-let auto;
+let auto = null;
 
-totalLabel.textContent = images.length;
+function renderDesktop(productsToRender) {
+  if (!masonryGrid) return;
 
-// crear slides
-images.forEach((src, i) => {
-  const div = document.createElement("div");
-  div.className = "peek-slide";
-  div.innerHTML = `<img src="${BASE + src}" />`;
-  track.appendChild(div);
-});
+  masonryGrid.innerHTML = productsToRender
+    .map((product) => {
+      return `
+        <div class="grid-item">
+          <img src="${BASE + product.src}" alt="Producto impreso en 3D" loading="lazy">
+        </div>
+      `;
+    })
+    .join("");
+}
 
-const slides = document.querySelectorAll(".peek-slide");
+function renderMobile(productsToRender) {
+  if (!track || !totalLabel || !currentLabel) return;
 
-function update() {
+  track.innerHTML = "";
+
+  productsToRender.forEach((product) => {
+    const slide = document.createElement("div");
+    slide.className = "peek-slide";
+    slide.innerHTML = `<img src="${BASE + product.src}" alt="Producto impreso en 3D">`;
+    track.appendChild(slide);
+  });
+
+  index = 0;
+  totalLabel.textContent = productsToRender.length;
+  currentLabel.textContent = productsToRender.length ? 1 : 0;
+
+  requestAnimationFrame(() => {
+    updateSlider();
+  });
+}
+
+function updateSlider() {
+  const slides = document.querySelectorAll(".peek-slide");
   const viewport = document.getElementById("peekViewport");
+
+  if (!slides.length || !viewport || !track) return;
+
   const slideWidth = slides[0].offsetWidth;
   const gap = parseFloat(getComputedStyle(track).gap) || 0;
+  const step = slideWidth + gap;
 
-  const offset =
-    index * (slideWidth + gap) -
-    (viewport.offsetWidth / 2) +
-    (slideWidth / 2);
+  let offset =
+    index * step -
+    viewport.offsetWidth / 2 +
+    slideWidth / 2;
+
+  offset = Math.max(0, offset);
 
   track.style.transform = `translateX(-${offset}px)`;
 
@@ -68,51 +100,100 @@ function update() {
 }
 
 function goTo(i) {
+  const slides = document.querySelectorAll(".peek-slide");
+  if (!slides.length) return;
+
   index = (i + slides.length) % slides.length;
-  update();
+  updateSlider();
 }
 
-prev.onclick = () => goTo(index - 1);
-next.onclick = () => goTo(index + 1);
+function filterProducts(category) {
+  filteredProducts =
+    category === "todos"
+      ? [...products]
+      : products.filter((product) => product.category === category);
 
-// autoplay
+  renderDesktop(filteredProducts);
+  renderMobile(filteredProducts);
+  restartAuto();
+}
+
 function startAuto() {
+  stopAuto();
   auto = setInterval(() => goTo(index + 1), 3000);
 }
 
 function stopAuto() {
-  clearInterval(auto);
+  if (auto) {
+    clearInterval(auto);
+    auto = null;
+  }
 }
 
-startAuto();
+function restartAuto() {
+  stopAuto();
+  startAuto();
+}
 
-// swipe (touch + mouse)
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    tabs.forEach((item) => item.classList.remove("active"));
+    tab.classList.add("active");
+
+    filterProducts(tab.dataset.category);
+  });
+});
+
+if (prev) {
+  prev.onclick = () => {
+    stopAuto();
+    goTo(index - 1);
+    startAuto();
+  };
+}
+
+if (next) {
+  next.onclick = () => {
+    stopAuto();
+    goTo(index + 1);
+    startAuto();
+  };
+}
+
 let startX = 0;
 
-track.addEventListener("mousedown", e => {
-  startX = e.clientX;
-  stopAuto();
-});
+if (track) {
+  track.addEventListener("mousedown", (e) => {
+    startX = e.clientX;
+    stopAuto();
+  });
 
-track.addEventListener("mouseup", e => {
-  const dx = e.clientX - startX;
-  if (dx > 50) goTo(index - 1);
-  if (dx < -50) goTo(index + 1);
-  startAuto();
-});
+  track.addEventListener("mouseup", (e) => {
+    const dx = e.clientX - startX;
 
-track.addEventListener("touchstart", e => {
-  startX = e.touches[0].clientX;
-  stopAuto();
-});
+    if (dx > 50) goTo(index - 1);
+    if (dx < -50) goTo(index + 1);
 
-track.addEventListener("touchend", e => {
-  const dx = e.changedTouches[0].clientX - startX;
-  if (dx > 50) goTo(index - 1);
-  if (dx < -50) goTo(index + 1);
-  startAuto();
-});
+    startAuto();
+  });
 
-window.addEventListener("resize", update);
+  track.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    stopAuto();
+  });
 
-update();
+  track.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+
+    if (dx > 50) goTo(index - 1);
+    if (dx < -50) goTo(index + 1);
+
+    startAuto();
+  });
+}
+
+window.addEventListener("resize", updateSlider);
+
+renderDesktop(products);
+renderMobile(products);
+startAuto();
