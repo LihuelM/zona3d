@@ -409,7 +409,7 @@
 }
 
 /* Hasta 390px */
-@media (max-width: 390px) {
+@media (max-width: 400px) {
   .lp-logo img {
     height: 30px;
   }
