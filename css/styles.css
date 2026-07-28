@@ -326,15 +326,115 @@
     .lp-trust-item { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text-muted); }
     .lp-trust-item::before { content: '✓'; color: var(--teal); font-weight: 700; }
 
-    /* ── FOOTER ── */
-    .lp-footer-inner {
-      max-width: var(--max); margin: 0 auto; padding: 22px 40px;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
-    }
-    .lp-footer { border-top: 1px solid var(--border); }
-    .lp-footer-logo { font-size: 14px; font-weight: 700; }
-    .lp-footer-logo span { color: var(--teal); }
-    .lp-footer-text { font-size: 12px; color: var(--text-muted); }
+    /* =========================
+   FOOTER
+========================= */
+
+.lp-footer {
+  padding: 52px 0 0;
+  border-top: 1px solid rgba(0, 201, 173, 0.16);
+}
+
+/* Primera fila */
+
+.lp-footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 48px;
+  padding-bottom: 42px;
+}
+
+.lp-footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.lp-footer-brand .lp-logo {
+  display: inline-flex;
+}
+
+.lp-footer-brand .lp-logo img {
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+.lp-footer-description {
+  margin: 0;
+  color: rgba(225, 240, 238, 0.48);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Contacto */
+
+.lp-footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  text-align: right;
+}
+
+.lp-footer-title {
+  margin: 0 0 6px;
+  color: rgba(225, 240, 238, 0.8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.lp-footer-contact a {
+  color: rgba(225, 240, 238, 0.52);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lp-footer-contact a:hover {
+  color: #00c9ad;
+}
+
+/* Segunda fila */
+
+.lp-footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+
+  padding: 22px 0;
+  border-top: 1px solid rgba(0, 201, 173, 0.16);
+
+  color: rgba(225, 240, 238, 0.48);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.lp-footer-bottom p {
+  margin: 0;
+}
+
+.lp-footer-bottom p:last-child {
+  text-align: right;
+}
+
+.lp-footer-bottom a {
+  color: rgba(225, 240, 238, 0.78);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lp-footer-bottom a:hover {
+  color: #00c9ad;
+}
 
     /* Catalogo */
     .catalog-title .line {
